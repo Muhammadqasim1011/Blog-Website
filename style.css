@@ -1,0 +1,450 @@
+:root {
+    --dark-color: black;
+    --light1-color: #eeeeee;
+    --light2-color: rgb(203, 203, 203);
+    --light3-color: #616161;
+    --sat-color: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* transition: all 0.3s ease; */
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--light1-color);
+}
+
+/* Start header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+    background: black;
+}
+
+.header a {
+    color: white;
+    font-size: 1rem;
+    /* background: red; */
+    padding: 11px 18px 10px;
+}
+
+.header a:hover {
+    background: var(--light1-color);
+    color: var(--dark-color);
+}
+
+/* End Header */
+
+/* Start Intro Section */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    /* background: red; */
+}
+
+.intro h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.intro p {
+    font-size: 1.1rem;
+}
+
+.intro p .jane {
+    background: var(--dark-color);
+    color: white;
+    padding: 0.3rem;
+    border-radius: 3px;
+}
+
+/* End Intro Section */
+
+/* Start main Section */
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: url(./girl\ background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    color: white;
+    align-items: start;
+    justify-content: center;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.49);
+    /* Adjust the last value for the desired opacity */
+    z-index: 0;
+    Ensure the overlay is behind the content
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    /* Ensure the content appears above the overlay */
+    margin: 0 0 0 40px;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.main-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.main-content button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    background: rgba(145, 145, 145, 0.49);
+}
+
+.main-content button:hover {
+    background: var(--light1-color);
+}
+
+/* End Main Section */
+
+/* Start Post Section */
+
+.wrapper {
+    margin: 30px;
+}
+
+
+.post {
+    /* background: red; */
+    margin-bottom: 3rem;
+}
+
+.article {
+    width: 65%;
+    float: left;
+}
+
+.article .post{
+    text-align: center;
+    background: white;
+    padding: 20px;
+}
+.article .post h2{
+    margin: 17px 0;
+}
+
+.article .post .title{
+    margin-bottom:14px ;
+}
+
+.date{
+    color: var(--light2-color);
+}
+
+.article .post img{
+    width: 100%;
+    /* height: 300px; */
+    /* object-fit: cover; */
+}
+
+.strong{
+    /* font-size: 1.2rem; */
+    font-weight: 900;
+}
+.article .post .para{
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 100;
+    word-spacing: 2px;
+}
+
+.article .post .btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.article .post .btn-box .btn{
+    padding: 0.7rem 1.7rem;
+    font-family: 1.3rem;
+    font-weight: 800;
+    background: transparent;
+    border: 1px solid var(--light2-color);
+    
+}
+
+.article .post .btn-box .btn:hover{
+    background: var(--light1-color);
+    border: none;
+}
+
+.article .post .btn-box .replies-btn{
+    background: var(--dark-color);
+    color: white;
+}
+
+.article .post .btn-box .replies-btn:hover{
+    color: var(--dark-color);
+    background: var(--light1-color);
+    border: none;
+}
+
+
+.bg-btn{
+    color: var(--dark-color);
+    background: white;
+    margin: 0 0 0 8px;
+    padding: 4px 7px;
+}
+
+.article .post .comment-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 17px;
+}
+
+.article .post .comment-box img{
+    width: 97px ;
+    height: 97px ;
+    object-fit: cover;
+}
+
+.article .post .comment-box p{
+    margin: 0 4px;
+
+}
+
+.article .post .comment-box p .strong{
+    font-size: 1.3rem;
+}
+
+.article .post .comment-box .comment-box-content{
+    text-align: left;
+    margin: 12px 4px;
+}
+
+.line{
+    border-bottom: 1px solid var(--light1-color);
+    padding-bottom: 40px;
+}
+
+.post2 .line{
+    border-bottom: none;
+}
+
+/* End Post Section */
+
+/* start Aside Section */
+.aside {
+    width: 32%;
+    float: left;
+    margin-left: 27px;
+}
+
+.aside .box{
+    background: var(--dark-color);
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.aside-content{
+    padding: 17px;
+}
+
+.aside-content h2{
+    font-size: 1.8rem;
+}
+.aside .box .aside-content p{
+    font-size: 1rem;
+    font-weight: lighter;
+
+}
+.aside img{
+    width: 100%;
+}
+
+.aside .box-2 {
+    background: white;
+    color: var(--light3-color);
+}
+
+.aside .box .aside-title{
+    background: black;
+    color: white;
+    padding: 1.3rem;
+}
+
+.aside .box-3 {
+    background: white;
+    color: var(--light3-color);
+}
+
+.item{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--light1-color);
+}
+
+.item div{
+    margin-left: 20px;
+}
+
+.aside-content2 .item:hover{
+    background: var(--light2-color);
+}
+
+.item div h2{
+    font-size: 1.2rem;
+}
+
+.item div p{
+    margin-top: 2px;
+}
+.aside .box-2 img{
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}
+
+.ads-area{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light1-color);
+}
+
+.aside .box-4 {
+    background: white;
+    color: black;
+}
+
+.aside .box .aside-content ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside .box .aside-content ul li{
+    margin: 8px 3px;
+    padding: 2px 4px;
+    background: var(--light1-color);
+}
+
+.aside .box .aside-content ul .active-list{
+    background: black;
+    color: white;
+    padding: 4px 8px;
+}
+
+.aside .box-4 .aside-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.aside .box-4 .aside-content img{
+    width: 44.9%;
+    height: 120px;
+    object-fit: cover;
+
+}
+
+.aside .box-5{
+    background:  white;
+}
+
+.aside .box-5 .aside-content .icons a{
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.aside .box-6{
+    background: white;
+    color: var(--light3-color);
+}
+
+.aside .box-6 .aside-content div input{
+    padding: 0.7rem 0.2rem;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.aside .box-6 .aside-content div button{
+    padding: 0.7rem 0.2rem;
+    width: 100%;
+    color: white;
+    border: none;
+    background: var(--sat-color);
+}
+
+.aside .box-6 .aside-content div button:hover{
+    background: var(--light2-color);
+    color: black;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    background: var(--light3-color);
+    float: left;
+    width: 100%;
+    height: 30vh;
+    color: white;
+}
+
+.footer button{
+    padding: 1rem;
+    background: black;
+    color: white;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.footer .dev{
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+
+@media (max-width:970px){
+    .article {
+        width: 100%;
+    }
+
+    .aside {
+        width: 100%;
+        margin-left: 0;
+    }
+}
